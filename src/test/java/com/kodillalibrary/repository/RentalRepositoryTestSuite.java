@@ -19,7 +19,7 @@ public class RentalRepositoryTestSuite {
     @Test
     void testRentalRepositorySave(){
         //Given
-        Rental Rental = new Rental(1, 1, LocalDate.of(2023, 01, 01), LocalDate.of(2023, 02, 02));
+        Rental Rental = new Rental(1, 1, 1);
         //When
         rentalRepository.save(Rental);
         //Then

@@ -26,10 +26,13 @@ public class Rental {
     @Column(name = "return_date")
     private LocalDate returnDate;
 
-    public Rental(long bookCopyId, long readerId, LocalDate rentalStartDate, LocalDate returnDate) {
+    public Rental(long id, long bookCopyId, long readerId) {
+        this.id = id;
         this.bookCopyId = bookCopyId;
         this.readerId = readerId;
-        this.rentalStartDate = rentalStartDate;
-        this.returnDate = returnDate;
+        this.rentalStartDate = LocalDate.now();
+    }
+    public void returnBook(){
+        this.returnDate = LocalDate.now();
     }
 }

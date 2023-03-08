@@ -19,7 +19,7 @@ public class ReaderRepositoryTestSuite {
     @Test
     void testReaderRepositorySave(){
         //Given
-        Reader reader = new Reader("John", "Test", LocalDate.of(2002, 02, 02));
+        Reader reader = new Reader(1, "John", "Test");
         //When
         readerRepository.save(reader);
         //Then

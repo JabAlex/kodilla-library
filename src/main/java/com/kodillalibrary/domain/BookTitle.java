@@ -12,6 +12,7 @@ import javax.persistence.Id;
 
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity(name = "book_titles")
 public class BookTitle {
     @Id
@@ -24,9 +25,4 @@ public class BookTitle {
     @Column(name = "publication_year")
     private int publicationYear;
 
-    public BookTitle(String title, String author, int publicationYear) {
-        this.title = title;
-        this.author = author;
-        this.publicationYear = publicationYear;
-    }
 }

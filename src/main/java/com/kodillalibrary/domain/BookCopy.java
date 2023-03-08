@@ -8,19 +8,20 @@ import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity(name = "book_copies")
 public class BookCopy {
     @Id
     @GeneratedValue
     private long id;
+
     @Column(name = "book_title_id")
     private long titleId;
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
     private BookCopyStatus bookCopyStatus;
 
-    public BookCopy(long titleId, BookCopyStatus bookCopyStatus) {
-        this.titleId = titleId;
+    public void setBookCopyStatus(BookCopyStatus bookCopyStatus){
         this.bookCopyStatus = bookCopyStatus;
     }
 }

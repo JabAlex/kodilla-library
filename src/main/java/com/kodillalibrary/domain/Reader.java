@@ -24,9 +24,10 @@ public class Reader {
     @Column(name = "account_creation_date")
     private LocalDate accountCreationDate;
 
-    public Reader(String firstname, String lastname, LocalDate accountCreationDate) {
+    public Reader(long id, String firstname, String lastname) {
+        this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
-        this.accountCreationDate = accountCreationDate;
+        this.accountCreationDate = LocalDate.now();
     }
 }

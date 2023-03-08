@@ -18,7 +18,7 @@ public class BookTitleRepositoryTestSuite {
     @Test
     void testBookTitleRepositorySave(){
         //Given
-        BookTitle bookTitle = new BookTitle("test book", "test author", 2023);
+        BookTitle bookTitle = new BookTitle(1,"test book", "test author", 2023);
         //When
         bookTitleRepository.save(bookTitle);
         //Then
